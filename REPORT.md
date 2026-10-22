@@ -1,8 +1,10 @@
 # Hands-on L9: Report
 
-**Name:**
-**Student ID:**
-**Email:**
+**Name:** Eswar kumar panta
+
+**Student ID:** 801505751
+
+**Email:** epanta@charlotte.edu
 
 ---
 
@@ -128,7 +130,7 @@ AdaptiveSparkPlan isFinalPlan=false
 Your comparison: are the two plans the same? Which operator is the join and which kind of
 join did Spark choose, where are the `Exchange` operators and why are they needed, and what
 does this tell you about choosing between SQL and the DataFrame API?
-
+``Yes, both physical plans are structurally identical because Spark's Catalyst Optimizer compiles both SQL and DataFrame code into the exact same execution strategy. Spark chose an inner BroadcastHashJoin using a BroadcastExchange to efficiently distribute the small users table. The other Exchange operators shuffle data by age_group for aggregations and partition it for the final sort by avg_likes DESC. This shows SQL and DataFrames are two interfaces to the same optimizer, so for equivalent queries the choice is mostly about readability and style, not performance.``
 
 
 ---
