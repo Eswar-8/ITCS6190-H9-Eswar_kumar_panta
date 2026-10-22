@@ -1,0 +1,4 @@
+sentiment,posts,avg_likes,avg_retweets
+Negative,1040,25.99,6.66
+Neutral,2285,49.31,12.68
+Positive,1675,77.17,19.32
